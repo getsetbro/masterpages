@@ -32,7 +32,7 @@
 	<SharePoint:AjaxDelta id="DeltaPlaceHolderAdditionalPageHead" Container="false" runat="server">
 		<asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server" />
 		<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true" />
-		<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" Visible="true" runat="server" />
 	</SharePoint:AjaxDelta>
 	<SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
 </head>
@@ -174,13 +174,13 @@
 								<h1 id="pageTitle" class="ms-core-pageTitle">
 									<SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server">
 										<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server">
-											<SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider">
+											<SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider" SkipLinkText="">
 												<PATHSEPARATORTEMPLATE><SharePoint:ClusteredDirectionalSeparatorArrow runat="server" /></PATHSEPARATORTEMPLATE>
 											</SharePoint:SPTitleBreadcrumb>
 										</asp:ContentPlaceHolder>
 									</SharePoint:AjaxDelta>
 									<SharePoint:AjaxDelta BlockElement="true" id="DeltaPlaceHolderPageDescription" CssClass="ms-displayInlineBlock ms-normalWrap" runat="server">
-										<a href="javascript:;" id="ms-pageDescriptionDiv" style="display:none;"><span id="ms-pageDescriptionImage">&#160;</span></a>
+										<a href="javascript:;" id="ms-pageDescriptionDiv" style="display:none;" data-accessibility-nocheck="true"><span id="ms-pageDescriptionImage">&#160;</span></a>
 										<span class="ms-accessible" id="ms-pageDescription"><asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat="server" /></span>
 										<SharePoint:ScriptBlock runat="server">
 											_spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout");
@@ -201,7 +201,7 @@
 					</div>
 				</div>
 				<div id="contentRow">
-					<div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList">
+					<div id="sideNavBox" role="Navigation" class="ms-dialogHidden ms-forceWrap ms-noList">
 						<SharePoint:AjaxDelta id="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" role="navigation" runat="server">
 							<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server">
 								<a id="startNavigation" name="startNavigation" tabIndex="-1"></a>
@@ -233,14 +233,14 @@
 									</SharePoint:SPNavigationManager>
 									<asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
 										<div class="ms-core-listMenu-verticalBox">
-											<SharePoint:ClusteredSPLinkButton runat="server" id="idNavLinkViewAll" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="<%$Resources:wss,AllSiteContentMore%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" />
+											<SharePoint:ClusteredSPLinkButton runat="server" id="idNavLinkViewAll" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="<%$Resources:wss,AllSiteContentMore%>" ToolTip="" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" />
 										</div>
 									</asp:ContentPlaceHolder>
 								</div>
 							</asp:ContentPlaceHolder>
 						</SharePoint:AjaxDelta>
 					</div>
-					<div id="contentBox" aria-live="polite" aria-relevant="all">
+					<div id="contentBox" aria-live="polite" aria-relevant="all" role="main">
 						<div id="notificationArea" class="ms-notif-box"></div>
 						<SharePoint:AjaxDelta id="DeltaPageStatusBar" BlockElement="true" runat="server">
 							<div id="pageStatusBar"></div>
