@@ -56,7 +56,7 @@
 			<div id="welcomeMenuBox"><wssuc:Welcome id="IdWelcome" runat="server" EnableViewState="false" /></div>
 			<div id="suiteBarButtons">
 				<span class="ms-siteactions-root" id="siteactiontd">
-				    <SharePoint:SiteActions runat="server" accesskey="<%$Resources:wss,tb_SiteActions_AK%>" id="SiteActionsMenuMain" PrefixHtml="" SuffixHtml="" ImageUrl="/_layouts/15/images/spcommon.png?rev=23" ThemeKey="spcommon" MenuAlignment="Right" MenuNotVisibleHtml="&amp;nbsp;" LargeIconMode="false" >
+					<SharePoint:SiteActions runat="server" accesskey="<%$Resources:wss,tb_SiteActions_AK%>" id="SiteActionsMenuMain" PrefixHtml="" SuffixHtml="" ImageUrl="/_layouts/15/images/spcommon.png?rev=23" ThemeKey="spcommon" MenuAlignment="Right" MenuNotVisibleHtml="&amp;nbsp;" LargeIconMode="false" >
 						<CustomTemplate>
 							<SharePoint:FeatureMenuTemplate runat="server" FeatureScope="Site" Location="Microsoft.SharePoint.StandardMenu" GroupId="SiteActions" UseShortId="true" >
 								<SharePoint:MenuItemTemplate runat="server" id="MenuItem_ShareThisSite" Text="<%$Resources:wss,siteactions_sharethissite%>" Description="<%$Resources:wss,siteactions_sharethissitedescription%>" MenuGroupId="100" Sequence="110" UseShortId="true" PermissionsString="ViewPages" PermissionMode="Any" />
@@ -111,12 +111,12 @@
 					</SharePoint:AjaxDelta>
 				</div>
 				<SharePoint:AjaxDelta id="DeltaWebPartAdderUpdatePanelContainer" BlockElement="true" CssClass="ms-core-webpartadder" runat="server">
-				  	<div id="WebPartAdderUpdatePanelContainer">
+					<div id="WebPartAdderUpdatePanelContainer">
 						<asp:UpdatePanel ID="WebPartAdderUpdatePanel" UpdateMode="Conditional" ChildrenAsTriggers="false" runat="server">
 							<ContentTemplate><WebPartPages:WebPartAdder ID="WebPartAdder" runat="server" /></ContentTemplate>
 							<Triggers><asp:PostBackTrigger ControlID="WebPartAdder" /></Triggers>
 						</asp:UpdatePanel>
-				  	</div>
+					</div>
 				</SharePoint:AjaxDelta>
 			</div>
 		</div>
@@ -188,7 +188,7 @@
 				</div>
 				<div id="contentRow">
 					<div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList">
-					  	<SharePoint:AjaxDelta id="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" role="navigation" runat="server">
+						<SharePoint:AjaxDelta id="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" role="navigation" runat="server">
 							<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server">
 								<a id="startNavigation" name="startNavigation" tabIndex="-1"></a>
 								<asp:ContentPlaceHolder id="PlaceHolderLeftNavBarTop" runat="server" />
@@ -224,10 +224,10 @@
 									</asp:ContentPlaceHolder>
 								</div>
 							</asp:ContentPlaceHolder>
-					  	</SharePoint:AjaxDelta>
+						</SharePoint:AjaxDelta>
 					</div>
 					<div id="contentBox" aria-live="polite" aria-relevant="all">
-					  <div id="notificationArea" class="ms-notif-box"></div>
+						<div id="notificationArea" class="ms-notif-box"></div>
 						<SharePoint:AjaxDelta id="DeltaPageStatusBar" BlockElement="true" runat="server">
 							<div id="pageStatusBar"></div>
 						</SharePoint:AjaxDelta>
