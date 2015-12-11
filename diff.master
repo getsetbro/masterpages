@@ -53,7 +53,9 @@
 		<div id="TurnOnAnimation" style="display:none;" class="s4-notdlg noindex"><a id="linkTurnOnAnimation" href="#" class="ms-accessible ms-acc-button" onclick="ToggleAnimationStatus();return false;"><SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,master_enableanimation%>" EncodeMethod="HtmlEncode"/></a></div>
 		<a id="HiddenAnchor" href="javascript:;" style="display:none;"></a><div id="suiteBar" class="ms-dialogHidden noindex"><div id="suiteBarLeft"><div class="ms-table ms-fullWidth"><div class="ms-tableRow"><div class="ms-tableCell ms-verticalAlignMiddle"><SharePoint:DelegateControl id="ID_SuiteBarBrandingDelegate" ControlId="SuiteBarBrandingDelegate" runat="server" /></div><SharePoint:AjaxDelta runat="server" id="DeltaSuiteLinks" BlockElement="true" CssClass="ms-core-deltaSuiteLinks"><div id="suiteLinksBox"><SharePoint:DelegateControl id="ID_SuiteLinksDelegate" ControlId="SuiteLinksDelegate" runat="server" /></div></SharePoint:AjaxDelta></div></div></div><div id="suiteBarRight">
 		<SharePoint:AjaxDelta runat="server" id="DeltaSuiteBarRight" CssClass="ms-core-deltaSuiteBarRight" BlockElement="true">
-			<div id="welcomeMenuBox"><wssuc:Welcome id="IdWelcome" runat="server" EnableViewState="false" /></div>
+			<div id="welcomeMenuBox">
+				<wssuc:Welcome id="IdWelcome" runat="server" EnableViewState="false" />
+			</div>
 			<div id="suiteBarButtons">
 				<span class="ms-siteactions-root" id="siteactiontd">
 				    <SharePoint:SiteActions runat="server" accesskey="<%$Resources:wss,tb_SiteActions_AK%>" id="SiteActionsMenuMain" PrefixHtml="" SuffixHtml="" ImageUrl="/_layouts/15/images/spcommon.png?rev=23" ThemeKey="spcommon" MenuAlignment="Right" MenuNotVisibleHtml="&amp;nbsp;" LargeIconMode="false" >
